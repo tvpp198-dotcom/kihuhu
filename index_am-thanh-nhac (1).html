@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sử Việt - Chặng 05 - Chiến tranh hiện đại</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111722;font-family:Georgia,serif;color:#38251f}.app{max-width:480px;min-height:100vh;margin:auto;background:#fff8eb;overflow:hidden}header{height:62px;background:#171d2b;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 20px}.logo{display:flex;align-items:center;gap:10px}.mark{background:#762c3a;border:1px solid #e8bd70;border-radius:10px;padding:8px;color:#e8bd70}.brand{font-weight:bold;letter-spacing:2px}.sub{font:9px Arial;color:#d9b98b;letter-spacing:1px;margin-top:4px}.pill{font:10px Arial;border:1px solid #74572f;border-radius:20px;padding:8px;color:#e8bd70}.screen{display:none}.active{display:block}
+.hero{background:#20283a;color:#fff8eb;padding:27px 20px 10px}.eyebrow{font:bold 10px Arial;letter-spacing:2px;color:#f3b653}h1{font-size:34px;line-height:1.08;margin:15px 0 10px}.hero p{font:12px/1.8 Arial;color:#ddd}.art{height:230px;background:linear-gradient(#283244,#393344);position:relative;overflow:hidden}.art svg{width:100%;height:100%}.art-label{position:absolute;bottom:12px;text-align:center;width:100%;font:bold 9px Arial;color:#f3c66d;letter-spacing:2px}.content{padding:19px 17px}.panel{border:1px solid #efd2a7;background:#fffdf8;border-radius:19px;overflow:hidden}.panel-main{padding:17px 15px}.topline{display:flex;justify-content:space-between;align-items:center;gap:8px}.mini{font:bold 9px Arial;color:#b33443;letter-spacing:1px}.period{font:10px Arial;color:#ad8c69;background:#f8edda;padding:6px 10px;border-radius:20px;white-space:nowrap}h2{font-size:23px;margin:14px 0 8px}.desc{font:11px/1.7 Arial;color:#987b68}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #f0dfc8;border-bottom:1px solid #f0dfc8}.stat{text-align:center;padding:12px 3px;border-right:1px solid #f0dfc8}.stat:last-child{border:0}.stat b{display:block;color:#a52c3c;font-size:16px}.stat small{font:9px Arial;color:#a68c77}button{cursor:pointer}.primary{width:100%;border:0;border-radius:13px;padding:15px;background:linear-gradient(100deg,#b63a48,#801d30);color:white;font:bold 12px Arial;letter-spacing:1px}.start{padding:14px}.hint{text-align:center;font:9px Arial;color:#a68c77;margin:0 0 14px}.features{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:12px}.feature{background:#f4e8d4;padding:13px 10px;border-radius:13px;font:10px Arial}.feature b{display:block;margin-bottom:5px}.credit{text-align:center;font:9px Arial;color:#b08e71;letter-spacing:1px;margin-top:17px}
+.quizhead{background:linear-gradient(115deg,#9d293a,#b33343);padding:22px 17px;color:white}.back{font:bold 10px Arial;color:#ffe1a6;cursor:pointer}.quizhead h2{font-size:23px;line-height:1.3}.quizbody{padding:20px 17px}.meta{display:flex;justify-content:space-between;align-items:center;font:bold 9px Arial;color:#a17d62;margin-bottom:13px;gap:10px}.sound{border:1px solid #e8d4b9;border-radius:20px;background:#fffdf8;padding:7px;font:bold 9px Arial;color:#80543c}.progress{height:5px;background:#f0dfc8;border-radius:9px;margin-bottom:20px;overflow:hidden}.fill{height:100%;background:#b33343;width:0;transition:.3s}.question{font-size:19px;line-height:1.4;margin-bottom:15px}.options{display:grid;gap:9px}.option{display:flex;align-items:center;gap:11px;text-align:left;padding:10px 12px;border:1px solid #ead4b7;border-radius:12px;background:#fffdfa;color:#38251f;min-height:49px;font:bold 12px Arial}.letter{width:27px;height:27px;display:grid;place-items:center;background:#f5e9d6;border-radius:8px;color:#a95b32;flex:none}.option.selected{border:1.5px solid #b33443;background:#fff0e9}.option.correct{border-color:#43875c;background:#edf8ef}.option.wrong{border-color:#bd4650;background:#fff0ef}.check{width:100%;margin-top:15px;padding:13px;border:0;border-radius:12px;background:#a92f40;color:white;font:bold 11px Arial}.check:disabled{background:#d9aaa5;cursor:not-allowed}.feedback{display:none;margin-top:13px;padding:12px;border-radius:10px;font:12px/1.6 Arial}.feedback.show{display:block}.good{background:#eaf5eb;color:#356b46}.bad{background:#fff0ed;color:#963541}.progress-caption{display:flex;justify-content:space-between;margin-top:15px;font:bold 9px Arial;color:#a17d62}
+.result{text-align:center;padding:45px 20px}.result-icon{font-size:55px;margin-bottom:10px}.result h2{color:#9c293a;font-size:27px}.result-box{margin:22px 0;padding:20px 15px;background:#fffdf8;border:1px solid #efd2a7;border-radius:18px}.result-score{font-size:42px;font-weight:bold;color:#a52c3c}.result-label{font:10px Arial;color:#a17d62;letter-spacing:1px;margin-top:5px}.result-detail{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}.result-item{background:#f7ecd9;padding:13px 5px;border-radius:12px}.result-item b{display:block;font-size:20px;color:#a52c3c}.result-item small{font:9px Arial;color:#987b68}.rank{margin:18px 0;padding:12px;border-radius:12px;background:#f4e5c7;color:#7b5527;font:bold 13px Arial}.result-buttons{display:grid;gap:9px}.secondary{width:100%;padding:13px;border:1px solid #d8b88a;border-radius:12px;background:#fff8eb;color:#8f2637;font:bold 11px Arial}@media(min-width:600px){body{padding:16px 0}.app{border-radius:24px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="logo"><span class="mark">✦</span><div><div class="brand">SỬ VIỆT</div><div class="sub">HÀNH TRÌNH LỊCH SỬ</div></div></div><div class="pill">VN <b>CHẶNG 05 / 06</b></div></header>
+
+<section id="intro" class="screen active">
+<div class="hero"><div class="eyebrow">LỊCH SỬ THẾ GIỚI · KỶ NGUYÊN CÔNG NGHỆ</div><h1>Chiến tranh hiện đại<br>& bước chuyển của thời đại</h1><p>Cùng tìm hiểu những đặc điểm nổi bật của chiến tranh hiện đại: sự phát triển của công nghệ, vai trò thông tin, tác động đến con người và những nguyên tắc nhân đạo trong xung đột.</p></div>
+<div class="art"><svg viewBox="0 0 480 230" preserveAspectRatio="xMidYMid slice"><circle cx="350" cy="88" r="69" fill="#08090d" stroke="#b58a52"/><path d="M0 182L75 126 132 181 210 108 280 183 345 126 480 198V230H0Z" fill="#1a2432"/><path d="M0 200L80 170 155 204 240 155 320 207 405 164 480 205V230H0Z" fill="#111b29"/><path d="M205 155V88H255V155Z" fill="#b87945" stroke="#f1c77c" stroke-width="2"/><path d="M195 88L230 55 265 88Z" fill="#8d2938" stroke="#f1c77c" stroke-width="2"/><path d="M219 55L230 31 241 55Z" fill="#d4a05c"/><path d="M230 31V10" stroke="#f5d38b" stroke-width="2"/><path d="M231 11L262 21 231 30Z" fill="#a92f40"/><rect x="218" y="105" width="24" height="50" fill="#b87945" stroke="#f1c77c" stroke-width="2"/><path d="M0 215Q100 194 190 215T380 211T480 216" fill="none" stroke="#d2a65e"/></svg><div class="art-label">CHIẾN TRANH HIỆN ĐẠI · CÔNG NGHỆ VÀ CON NGƯỜI</div></div>
+<div class="content"><div class="panel"><div class="panel-main"><div class="topline"><span class="mini">CHẶNG 05 · CHIẾN TRANH HIỆN ĐẠI</span><span class="period">THẾ KỶ XX – XXI</span></div><h2>Những chuyển biến của chiến tranh hiện đại</h2><p class="desc">Từ chiến tranh thế giới đến thời đại công nghệ số — cùng tìm hiểu những thay đổi về phương thức, công nghệ, thông tin và cách cộng đồng quốc tế bảo vệ con người.</p></div><div class="stats"><div class="stat"><b>THẾ KỶ XX–XXI</b><small>Giai đoạn lịch sử</small></div><div class="stat"><b>10 câu</b><small>Thử thách kiến thức</small></div><div class="stat"><b>100 điểm</b><small>Điểm tối đa</small></div></div><div class="start"><button class="primary" onclick="startQuiz()">BẮT ĐẦU HÀNH TRÌNH　→</button></div><p class="hint">10 câu hỏi · Hoàn thành để xem kết quả</p></div><div class="features"><div class="feature">🏹<b>Ôn lại kiến thức</b>10 câu hỏi lịch sử trọng tâm</div><div class="feature">🏅<b>Tích lũy thành tích</b>10 điểm mỗi câu đúng</div></div><div class="credit">THIẾT KẾ HỌC TẬP STEAM · LỚP 12/2</div></div>
+</section>
+
+<section id="quiz" class="screen">
+<div class="quizhead"><div class="back" onclick="back()">← QUAY LẠI GIỚI THIỆU</div><div class="eyebrow" style="margin-top:18px">CHẶNG 05 · THỬ THÁCH LỊCH SỬ</div><h2>Chiến tranh hiện đại</h2></div>
+<div class="quizbody"><div class="meta"><span id="num">CÂU HỎI 01 / 10</span><span><b id="score">0 ĐIỂM</b> <button class="sound" id="sound" onclick="toggleSound()">🔊 ÂM THANH</button> <button class="sound" id="music" onclick="toggleMusic()">♫ NHẠC</button></span></div><div class="progress"><div class="fill" id="fill"></div></div><h3 class="question" id="question"></h3><div class="options" id="options"></div><button class="check" id="check" onclick="check()" disabled>CHỌN ĐÁP ÁN</button><div class="feedback" id="feedback"></div><div class="progress-caption"><span>TIẾN TRÌNH CỦA BẠN</span><span id="count">0 / 10</span></div></div>
+</section>
+
+<section id="result" class="screen result"><div class="result-icon">🏆</div><div class="eyebrow">CHẶNG 05 · CỦNG CỐ KẾT QUẢ</div><h2>Bạn đã hoàn thành!</h2><div class="result-box"><div class="result-score" id="finalScore">0 / 10</div><div class="result-label">SỐ CÂU TRẢ LỜI ĐÚNG</div><div class="result-detail"><div class="result-item"><b id="correctCount">0</b><small>CÂU ĐÚNG</small></div><div class="result-item"><b id="wrongCount">0</b><small>CÂU SAI</small></div></div><div class="rank" id="rank"></div></div><div class="result-buttons"><button class="primary" onclick="startQuiz()">↻ LÀM LẠI CHẶNG NÀY</button><button class="secondary" onclick="back()">← VỀ GIỚI THIỆU</button></div></section>
+</div>
+
+<script>
+const data=[
+{q:"Một đặc điểm nổi bật của chiến tranh hiện đại so với nhiều cuộc chiến tranh trước đây là gì?",a:["Chỉ sử dụng vũ khí thô sơ","Ứng dụng rộng rãi khoa học – công nghệ","Không có vai trò của thông tin","Không ảnh hưởng đến dân thường"],c:1,e:"Chiến tranh hiện đại gắn với sự phát triển mạnh mẽ của khoa học – công nghệ. Công nghệ làm thay đổi phương tiện, cách thức tổ chức và phạm vi tác động của chiến tranh."},
+{q:"Trong chiến tranh hiện đại, vì sao thông tin và truyền thông có vai trò ngày càng quan trọng?",a:["Giúp lan truyền và tiếp nhận thông tin nhanh chóng","Thay thế hoàn toàn mọi hoạt động xã hội","Khiến mọi thông tin đều chính xác","Không có ảnh hưởng đến nhận thức"],c:0,e:"Thông tin và truyền thông có thể ảnh hưởng đến nhận thức xã hội, hoạt động chỉ huy, cứu trợ và cách con người tiếp cận các sự kiện."},
+{q:"Thuật ngữ nào chỉ các hoạt động gây ảnh hưởng hoặc tấn công thông qua hệ thống máy tính và mạng internet?",a:["Chiến tranh trên bộ","Chiến tranh mạng","Chiến tranh du kích","Chiến tranh hải quân"],c:1,e:"Chiến tranh mạng là khái niệm chỉ các hoạt động xung đột trong không gian mạng, có thể tác động đến hệ thống thông tin và hạ tầng số."},
+{q:"Một vấn đề nhân đạo quan trọng trong các cuộc xung đột hiện đại là gì?",a:["Bảo vệ dân thường và người không tham chiến","Mở rộng thiệt hại cho dân cư","Không cần hỗ trợ người bị ảnh hưởng","Bỏ qua các quy tắc quốc tế"],c:0,e:"Trong xung đột vũ trang, việc bảo vệ dân thường và những người không trực tiếp tham chiến là một nguyên tắc nhân đạo quan trọng."},
+{q:"Tổ chức quốc tế nào có vai trò quan trọng trong việc thúc đẩy hòa bình, an ninh và hợp tác giữa các quốc gia?",a:["Liên Hợp Quốc","Liên đoàn bóng đá thế giới","Tổ chức Du lịch thế giới","Ủy ban Olympic quốc tế"],c:0,e:"Liên Hợp Quốc được thành lập năm 1945 với mục tiêu duy trì hòa bình, an ninh quốc tế và thúc đẩy hợp tác giữa các quốc gia."},
+{q:"Yếu tố nào góp phần làm thay đổi phương thức tiến hành chiến tranh trong thời đại ngày nay?",a:["Sự phát triển của công nghệ thông tin và vũ khí hiện đại","Việc loại bỏ hoàn toàn công nghệ","Sự biến mất của hệ thống thông tin","Việc chỉ sử dụng phương tiện thủ công"],c:0,e:"Sự phát triển của công nghệ thông tin, phương tiện trinh sát và nhiều loại vũ khí hiện đại đã làm thay đổi đáng kể phương thức tiến hành chiến tranh."},
+{q:"Không gian nào ngày càng trở thành một lĩnh vực quan trọng trong các hoạt động xung đột hiện đại?",a:["Không gian mạng","Chỉ vùng nông thôn","Chỉ vùng núi","Chỉ vùng đồng bằng"],c:0,e:"Không gian mạng ngày càng có vai trò quan trọng trong đời sống quốc gia và quốc tế, vì vậy cũng trở thành một lĩnh vực có thể phát sinh các hoạt động xung đột."},
+{q:"Trong bối cảnh chiến tranh hiện đại, việc kiểm chứng thông tin có ý nghĩa gì?",a:["Giúp hạn chế thông tin sai lệch","Làm cho mọi tin tức trở thành sự thật","Không có ý nghĩa","Chỉ cần tin vào thông tin trên mạng xã hội"],c:0,e:"Kiểm chứng thông tin giúp hạn chế tin giả và thông tin sai lệch, từ đó giúp con người có nhận thức chính xác hơn về các sự kiện."},
+{q:"Một hậu quả nghiêm trọng của chiến tranh đối với xã hội là gì?",a:["Gây thiệt hại về người, cơ sở hạ tầng và đời sống","Làm mọi quốc gia phát triển nhanh hơn","Không ảnh hưởng đến kinh tế","Không ảnh hưởng đến dân cư"],c:0,e:"Chiến tranh có thể gây tổn thất lớn về con người, cơ sở hạ tầng, kinh tế và đời sống xã hội."},
+{q:"Mục tiêu quan trọng của cộng đồng quốc tế trong việc hạn chế chiến tranh là gì?",a:["Duy trì hòa bình và bảo vệ con người","Khuyến khích mọi xung đột","Mở rộng chiến tranh","Loại bỏ mọi hoạt động hợp tác"],c:0,e:"Duy trì hòa bình, bảo vệ con người và thúc đẩy hợp tác quốc tế là những mục tiêu quan trọng của cộng đồng quốc tế."}
+];
+
+let i=0,score=0,correct=0,chosen=null,locked=false,soundOn=true,order=[];
+
+function show(id){document.querySelectorAll(".screen").forEach(x=>x.classList.remove("active"));document.getElementById(id).classList.add("active");window.scrollTo(0,0)}
+function back(){show("intro")}
+function startQuiz(){getAudioCtx();startGentleMusic();i=0;score=0;correct=0;show("quiz");render()}
+
+function render(){
+chosen=null;locked=false;let q=data[i];
+order=q.a.map((v,j)=>({v,j})).sort(()=>Math.random()-.5);
+document.getElementById("num").textContent=`CÂU HỎI ${String(i+1).padStart(2,"0")} / 10`;
+document.getElementById("score").textContent=score+" ĐIỂM";
+document.getElementById("question").textContent=q.q;
+document.getElementById("fill").style.width=(i/10*100)+"%";
+document.getElementById("count").textContent=i+" / 10";
+let opts=document.getElementById("options");opts.innerHTML="";
+order.forEach((x,j)=>{
+let b=document.createElement("button");b.className="option";
+b.innerHTML=`<span class="letter">${String.fromCharCode(65+j)}</span><span>${x.v}</span>`;
+b.onclick=()=>{
+if(locked)return;chosen=x.j;
+document.querySelectorAll(".option").forEach(o=>o.classList.remove("selected"));
+b.classList.add("selected");
+document.getElementById("check").disabled=false;
+document.getElementById("check").textContent="KIỂM TRA ĐÁP ÁN";
+};
+opts.appendChild(b);
+});
+document.getElementById("feedback").className="feedback";
+document.getElementById("feedback").innerHTML="";
+document.getElementById("check").disabled=true;
+document.getElementById("check").textContent="CHỌN ĐÁP ÁN";
+document.getElementById("check").onclick=check;
+}
+
+let audioCtx=null,musicTimer=null,musicOn=true;
+
+function getAudioCtx(){
+  if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==="suspended") audioCtx.resume();
+  return audioCtx;
+}
+
+function beep(type){
+  if(!soundOn)return;
+  try{
+    const audio=getAudioCtx();
+    const osc=audio.createOscillator(),gain=audio.createGain();
+    osc.connect(gain);gain.connect(audio.destination);
+    if(type==="correct"){
+      osc.type="sine";
+      osc.frequency.setValueAtTime(660,audio.currentTime);
+      osc.frequency.setValueAtTime(880,audio.currentTime+.12);
+      gain.gain.setValueAtTime(.22,audio.currentTime);
+      gain.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.38);
+      osc.start();osc.stop(audio.currentTime+.38);
+    }else{
+      osc.type="triangle";
+      osc.frequency.setValueAtTime(260,audio.currentTime);
+      osc.frequency.setValueAtTime(180,audio.currentTime+.15);
+      gain.gain.setValueAtTime(.18,audio.currentTime);
+      gain.gain.exponentialRampToValueAtTime(.001,audio.currentTime+.45);
+      osc.start();osc.stop(audio.currentTime+.45);
+    }
+  }catch(e){}
+}
+
+function gentleNote(freq,duration=1.15){
+  if(!musicOn)return;
+  try{
+    const audio=getAudioCtx();
+    const osc=audio.createOscillator(),gain=audio.createGain();
+    osc.type="sine";osc.frequency.value=freq;
+    osc.connect(gain);gain.connect(audio.destination);
+    gain.gain.setValueAtTime(.0001,audio.currentTime);
+    gain.gain.linearRampToValueAtTime(.025,audio.currentTime+.18);
+    gain.gain.linearRampToValueAtTime(.0001,audio.currentTime+duration);
+    osc.start();osc.stop(audio.currentTime+duration);
+  }catch(e){}
+}
+
+function startGentleMusic(){
+  if(musicTimer||!musicOn)return;
+  const notes=[261.63,329.63,392.00,329.63,293.66,349.23,440.00,349.23];
+  let n=0;
+  gentleNote(notes[n++]);
+  musicTimer=setInterval(()=>gentleNote(notes[n++%notes.length]),1150);
+}
+
+function stopGentleMusic(){
+  if(musicTimer){clearInterval(musicTimer);musicTimer=null;}
+}
+
+function toggleMusic(){
+  musicOn=!musicOn;
+  if(musicOn){
+    getAudioCtx();startGentleMusic();
+    document.getElementById("music").textContent="♫ NHẠC";
+  }else{
+    stopGentleMusic();
+    document.getElementById("music").textContent="♫ TẮT NHẠC";
+  }
+}
+
+function check(){
+if(chosen===null||locked)return;locked=true;
+let q=data[i],ok=chosen===q.c;
+document.querySelectorAll(".option").forEach((b,j)=>{
+b.disabled=true;
+if(order[j].j===q.c)b.classList.add("correct");
+else if(order[j].j===chosen)b.classList.add("wrong");
+});
+let feedback=document.getElementById("feedback");
+if(ok){
+score+=10;correct++;beep("correct");
+feedback.className="feedback show good";
+feedback.innerHTML=`<b>✓ CHÍNH XÁC!</b><br>${q.e}`;
+}else{
+beep("wrong");
+feedback.className="feedback show bad";
+feedback.innerHTML=`<b>✕ CHƯA CHÍNH XÁC!</b><br><b>Đáp án đúng:</b> ${q.a[q.c]}<br>${q.e}`;
+}
+document.getElementById("score").textContent=score+" ĐIỂM";
+document.getElementById("count").textContent=(i+1)+" / 10";
+document.getElementById("fill").style.width=((i+1)/10*100)+"%";
+let btn=document.getElementById("check");btn.disabled=false;
+if(i<9){btn.textContent="CÂU TIẾP THEO →";btn.onclick=()=>{i++;render()}}
+else{btn.textContent="XEM KẾT QUẢ";btn.onclick=showResult}
+}
+
+function showResult(){
+let wrong=10-correct;
+document.getElementById("finalScore").textContent=`${correct} / 10`;
+document.getElementById("correctCount").textContent=correct;
+document.getElementById("wrongCount").textContent=wrong;
+let rank=correct>=9?"🏆 XUẤT SẮC — Kiến thức rất tốt!":correct>=7?"🥇 KHÁ TỐT — Bạn đã nắm khá chắc kiến thức.":correct>=5?"📖 CẦN CỦNG CỐ — Hãy ôn lại những câu chưa đúng.":"💪 HÃY THỬ LẠI — Ôn tập thêm và chinh phục lại chặng này.";
+document.getElementById("rank").textContent=rank;show("result");
+}
+function toggleSound(){soundOn=!soundOn;document.getElementById("sound").textContent=soundOn?"🔊 ÂM THANH":"🔇 TẮT TIẾNG"}
+</script>
+</body>
+</html>
